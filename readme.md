@@ -1,11 +1,12 @@
 # Modular Express
 
+<!--WDI5 11:25 -->
 <!--WDI3 11:16 -->
 <!--Started this around 11:20 -->
 <!--WDI4 11:35 -->
 
 <!--11:00 5 minutes -->
-<!-- Hook: So for the last couple days we have been doing a delicate dance between the front end and the back end.  Raise your hand if you're ready to put that final puzzle piece in place.-->
+<!-- Hook: So for the last couple days we have been doing a delicate dance between the front end and the back end.  Raise your hand if you're ready to put that puzzle piece in place.-->
 
 ### Objectives
 *After this lesson, students will be able to:*
@@ -44,6 +45,7 @@
 A **route** is a combination of a path (e.g. `/about`) and HTTP verb (e.g. `GET`) that allows a server to direct (route) a certain request to a certain response.
 
 ## Adding Routes to our app 
+<!--WDI5 11:30 -->
 <!--11:40 WDI4 -->
 <!-- WDI3 11:20 -->
 <!-- 11:05 10 minutes --> 
@@ -85,6 +87,7 @@ This app works but as we keep adding more endpoints, we'll end up creating more 
 
 ## Creating a routes module 
 <!--11:31 after running through all these steps myself -->
+<!--WDI5 11:39 -->
 <!-- 11:15 20 minutes -->
 <!-- Catch-up -->
 
@@ -95,12 +98,14 @@ Here are the steps to refactor our routes to a new file:
 1. Create the new file
 2. Move the routes(.get, .post, etc) to the new file
 <!--11:46 WDI4 -->
+<!--WDI5 11:44 -->
 <!--Good stop point-->
 <!--11:49 WDI4 -->
 3. Use the Router constructor
 4. Export the router
 5. Require the router from the file that runs the main app
 <!--11:54 WDI4 -->
+<!--WDI5 11:53-->
 <!--Good stop point-->
 <!--11:57 WDI4 -->
 <!--12:02 WDI4 -->
@@ -129,6 +134,7 @@ In the ``myRouter.js`` file, we need to let Node know that we want to return the
 Inside of our main ``app.js`` we need to make sure our app uses the router. This is done by using ``app.use('/api', myRouter)``.
 
 ## Restful Routing - Back End
+<!--WDI5 11:58 -->
 <!-- 11:35 10 minutes -->
 
 We are going to use the RESTful standard to build our web apps. REST stands for REpresentational State Transfer and is an organizational standard for web architecture designed "to induce performance, scalability, simplicity, modifiability, visibility, portability, and reliability," in the words of its author, Roy Thomas Fielding.
@@ -207,8 +213,9 @@ POST request to /bicycles, this is the CREATE route
 
 Once you get all 7 routes printing their path and method, see if you can return JSON for a couple cars with the Index route.
 
-<!--This should not be here, it should be a mini-intro to the lab, and there NEEDS to be a real application, not just high-fallutin car talk -->
+<!--WDI5 break for lunch at 12:30 -->
 
+<!--WDI5 1:32 -->
 <!--WDI4 1:56 -->
 <!--WDI3 12:28 -->
 <!--Took 10 minutes to talk about rest below WDI3-->
@@ -228,7 +235,7 @@ When we want to use the body-parser middleware we need to do two things:
 1. Include the body-parser module, ``require('body-parser')``
 2. Tell the application we want to use the body-parser middleware ``app.use(bodyParser.json())``
 
-Body-parser includes a number of ways that body can parsed. The two most common are ``bodyParser.json()`` for parsing JSON from AJAX calls and ``bodyParser.urlencoded({ extended: false })`` for parsing data from HTML forms. You can use both with ``app.use`` statements.
+Body-parser includes a number of ways that a request body can parsed. The two most common are ``bodyParser.json()`` for parsing JSON from AJAX calls and ``bodyParser.urlencoded({ extended: false })`` for parsing data from HTML forms. You can use both with ``app.use`` statements.
 
 Once you use body-parser, the params passed with a request will be "decoded" automatically, allowing you to use dot notation just as you would with a JS object.
 
@@ -247,6 +254,8 @@ A framework can be overwhelming at the start, but after a couple of days you wil
 
 - What is Middleware and why is it helpful in Express?
 - Explain how body-parser helps decode information in your application.
+
+<!--Ending 1:45 WDI5 -->
 
 ## Licensing
 All content is licensed under a CC­BY­NC­SA 4.0 license.
